@@ -1,0 +1,20 @@
+
+% Lotka-Volterra models of competition for 1 species
+
+close all;
+clear all;
+clc;
+
+dt = .1;
+t = 0:dt:10;
+count = 1;
+
+r = 1;
+x0 = 1;
+
+[T,X] = ode45('lotka_volterra_1d_rhs', t, x0, [], r);
+
+figure(count)
+plot(T,X)
+
+count = count + 1;
